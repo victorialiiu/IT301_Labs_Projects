@@ -1,17 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Page</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <heading>
-        <h1> IT301 Lab and Projects </h1>
-    </heading>
-    <p>This is my <strong>first <br> </strong>page</p>
-    <!-- this note never renders -->
-     <p> This is my second paragraph</p>
-     
+    <header class="site-header">
+    <h1>Victoria's First Page</h1>
+    <p class="subtitle">My personalized website</p>
+  </header>
+
+  <nav class="site-nav">
+    <a href="#labs">My Labs</a>
+    <a href="#interests">My Interests</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+     <section id="labs">
+      <h2>Previous Labs</h2>
+      <p>A list of all my previous IT301 Labs:</p>
+      <ul>
+        <li>Lab 1: IT301 Labs Webpage</li>
+        <li>Lab 2: Styling with CSS</li>
+        <li>Lab 3: Style my page</li>
+      </ul>
+    </section>
+
+
+    <section id="interests">
+      <h2>My Interests</h2>
+      <p>I have many different hobbies. Here are some links:</p>
+      <ul class="link-list">
+        <li><a href="https://bromabakery.com/best-chocolate-chip-cookies/" target="_blank" rel="noopener">My Favorite Cookie Recipe</a> — My go-to cookie recipe.</li>
+        <li><a href="https://www.nps.gov/index.htm" target="_blank" rel="noopener">National Parks</a> — I hike a lot.</li>
+        <li><a href="https://foodieholly.com/2024/08/14/creamy-garlic-parmesan-steak-pasta/" target="_blank" rel="noopener">Garlic Parm Steak Pasta</a> — My favorite pasta recipe.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email me at
+        <a href="mailto:liuvp@dukes.jmu.edu">liuvp@dukes.jmu.edu</a>
+        or connect with me on
+        <a href="https://github.com/victorialiiu" target="_blank" rel="noopener">GitHub</a>.
+      </p>
+    </section>
+
+  </main>
+
 </body>
 </html>
