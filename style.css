@@ -1,0 +1,57 @@
+body{
+    instrument-serif-regular {
+        font-family: "Instrument Serif", serif;
+        font-weight: 400;
+        font-style: normal;
+}
+    instrument-serif-regular-italic {
+        font-family: "Instrument Serif", serif;
+        font-weight: 400;
+        font-style: italic;
+}
+}
+
+.site-header {
+    font-family: ;
+    background-color: #6ea8df;
+    color: #183355;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    
+    
+}
+.site-header h1 {
+  font-family: 'Instrument Serif', sans-serif;
+  font-weight: 1000;
+  margin: auto;
+  
+  
+}
+.site-header .subtitle {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    color: #ffffff;
+
+    
+}
+
+.site-nav {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+ 
+.site-nav a {
+  font-family: 'Poppins', sans-serif;
+  color: #3a5a78;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 15px;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
