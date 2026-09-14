@@ -13,8 +13,8 @@ body{
 
 .site-header {
     font-family: ;
-    background-color: #aed1f2;
-    color: #112b4a;
+    background-color: #6ea8df;
+    color: #183355;
     text-align: center;
     padding: 40px;
     border-radius: 10px;
@@ -32,7 +32,7 @@ body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 400;
     font-size: 1.1em;
-    color: #2e5e87;
+    color: #ffffff;
 
     
 }
@@ -40,7 +40,7 @@ body{
 .site-nav {
   background-color: #ffffff;
   text-align: center;
-  padding: 4px;
+  padding: 5px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
