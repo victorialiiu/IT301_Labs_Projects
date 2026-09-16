@@ -1,0 +1,30 @@
+<style>
+.space {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+}
+
+.hleft, .hright {
+    background-color: rgb(0, 0, 0);
+    display: inline-block;
+    width: 20px;
+    height: 100px;
+}
+
+.hleft {
+    margin-right: 20px;
+}
+
+.hright {
+    margin-left: 20px;
+}
+
+</style>
+
+
+<body>
+    <div class="h">
+        <div class="hleft"></div>
+        <div class="hright"></div>
+    </div>
+</body>
