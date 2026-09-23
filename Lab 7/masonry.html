@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masonry</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  html, body {
+    height: 100%;
+    overflow: hidden; 
+  }
+ 
+  .sidebar {
+    display: flex;
+    height: 100vh;
+  }
+ 
+
+  .sidebar > aside {
+    width: 90px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 100vh;
+    background-color:orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+ 
+  aside > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  ul > li {
+    margin-top: .2rem;
+  }
+ 
+  ul > li:first-child {
+    margin-top: 0;
+  }
+ 
+  .icon {
+    font-size: 2rem;
+  }
+ 
+
+  .sidebar > main {
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: white;
+    padding: 4px;
+  }
+
+  main > .masonry {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+ 
+  .masonry > img {
+    height: 100px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    object-fit: cover; 
+    margin: 2px;
+  }
+</style>
+</head>
+<body>
+ 
+<div class="sidebar">
+ 
+  <aside>
+    <ul>
+      <li><span class="icon" title="Photos">&#x1F4F7;</span></li>
+      <li><span class="icon" title="Files">&#x1F5C4;&#xfe0f;</span></li>
+      <li><span class="icon" title="Favorites">&#x2764;&#xfe0f;</span></li>
+    </ul>
+    <span class="icon" title="Trash">&#x1F5D1;&#xfe0f;</span>
+  </aside>
+ 
+  <main>
+    <div class="masonry">
+      <img src="https://picsum.photos/157/100" alt="photo 1">
+      <img src="https://picsum.photos/112/100" alt="photo 2">
+      <img src="https://picsum.photos/240/100" alt="photo 3">
+      <img src="https://picsum.photos/225/100" alt="photo 4">
+      <img src="https://picsum.photos/214/100" alt="photo 5">
+      <img src="https://picsum.photos/171/100" alt="photo 6">
+      <img src="https://picsum.photos/152/100" alt="photo 7">
+      <img src="https://picsum.photos/379/100" alt="photo 8">
+      <img src="https://picsum.photos/144/100" alt="photo 9">
+      <img src="https://picsum.photos/316/100" alt="photo 10">
+      <img src="https://picsum.photos/116/100" alt="photo 11">
+      <img src="https://picsum.photos/115/100" alt="photo 12">
+      <img src="https://picsum.photos/147/100" alt="photo 13">
+      <img src="https://picsum.photos/211/100" alt="photo 14">
+      <img src="https://picsum.photos/219/100" alt="photo 15">
+      <img src="https://picsum.photos/358/100" alt="photo 16">
+      <img src="https://picsum.photos/113/100" alt="photo 17">
+      <img src="https://picsum.photos/387/100" alt="photo 18">
+      <img src="https://picsum.photos/201/100" alt="photo 19">
+      <img src="https://picsum.photos/314/100" alt="photo 20">
+      <img src="https://picsum.photos/212/100" alt="photo 21">
+      <img src="https://picsum.photos/329/100" alt="photo 22">
+      <img src="https://picsum.photos/242/100" alt="photo 23">
+      <img src="https://picsum.photos/103/100" alt="photo 24">
+      <img src="https://picsum.photos/122/100" alt="photo 25">
+      <img src="https://picsum.photos/222/100" alt="photo 26">
+      <img src="https://picsum.photos/444/100" alt="photo 27">
+      <img src="https://picsum.photos/302/100" alt="photo 28">
+      <img src="https://picsum.photos/219/100" alt="photo 29">
+      <img src="https://picsum.photos/327/100" alt="photo 30">
+      <img src="https://picsum.photos/212/100" alt="photo 31">
+      <img src="https://picsum.photos/132/100" alt="photo 32">
+    </div>
+  </main>
+ 
+</div>
+ 
+</body>
+</html>
