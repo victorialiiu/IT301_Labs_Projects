@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Box Model</title>
+    <title>DOM</title>
     <style>
-        div{
-            background-color: aqua;
-            width: 70px;
-        }
-        span{
-            background-color: blueviolet;
-            width: 20px;
-        }
     </style>
 </head>
 <body>
-    <div> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, in iste ea esse repudiandae a. Cupiditate quidem voluptas enim sed rem ad. Optio praesentium, perspiciatis ullam nam sed aspernatur consequuntur? <span>SPAN</span></div>
+    <div id="box">Hi! <span id= 'MySpan'>secret</span></div>
+    <script>
+        document.title = "New Title";
+        document.body.style.backgroundColor = 'Pink';
+        const box = document.getElementById('box');
+        console.log(document);
+        box.innerText = "<h1> content from javascript </h1>"
+        
 
+    </script>
 </body>
 </html>
