@@ -1,0 +1,213 @@
+/* style.css - one stylesheet used by all 5 pages */
+
+/* ---------- General ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; /* body font */
+  margin: 0;
+  background-color: #fff8f0;
+  color: #222222;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif; /* heading font */
+  color: #5c3d2e;
+}
+
+a {
+  color: #0000cc;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Header and navigation ---------- */
+header {
+  background-color: #5c3d2e;
+  color: white;
+  padding: 15px 20px;
+  position: sticky; /* positioning method 1: header stays at top */
+  top: 0;
+}
+
+header h1 {
+  color: white;
+  margin: 0;
+  font-size: 28px;
+}
+
+header p {
+  margin: 5px 0 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+nav a {
+  color: white;
+  padding: 5px 10px;
+  display: block;
+}
+
+nav a.current {
+  background-color: white;
+  color: #5c3d2e;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ---------- Main and footer ---------- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+footer {
+  background-color: #5c3d2e;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+}
+
+/* ---------- Cafe boxes (home and reviews pages) ---------- */
+.cafe {
+  background-color: white;
+  border: 2px solid #5c3d2e;
+  padding: 15px;
+  margin-bottom: 20px;
+  position: relative; /* positioning method 2: holds the rating */
+}
+
+.cafe h2, .cafe h3 {
+  margin-top: 0;
+  margin-right: 70px;
+}
+
+.rating {
+  position: absolute; /* positioning method 3: rating in corner of box */
+  top: 15px;
+  right: 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ---------- Home page ---------- */
+.hero-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* crops the tall photo to fit */
+  object-position: center 60%;
+  border: 2px solid #5c3d2e;
+}
+
+/* ---------- Compare page ---------- */
+.table-box {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+}
+
+th, td {
+  border: 1px solid #5c3d2e;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #e8d5c4;
+}
+
+/* ---------- How we rate page ---------- */
+.steps li {
+  margin-bottom: 10px;
+}
+
+/* ---------- Submit page (form) ---------- */
+form {
+  background-color: white;
+  border: 2px solid #5c3d2e;
+  padding: 15px;
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="email"], select, textarea {
+  width: 100%;
+  padding: 6px;
+  font-size: 16px;
+}
+
+input[type="checkbox"] {
+  margin-top: 15px;
+}
+
+.check-label {
+  display: inline;
+  font-weight: normal;
+}
+
+button {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background-color: #5c3d2e;
+  color: white;
+  border: none;
+  font-size: 16px;
+}
+
+/* ---------- MEDIA QUERIES (layout for small and large screens) ---------- */
+
+/* Small screens: nav links stack in a list */
+@media (max-width: 500px) {
+  nav li {
+    display: block;
+    margin-right: 0;
+  }
+
+  th, td {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+
+/* Large screens: cafe boxes sit in two columns */
+@media (min-width: 700px) {
+  .cafe-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .cafe {
+    width: calc(50% - 10px);
+    margin-bottom: 0;
+  }
+}
