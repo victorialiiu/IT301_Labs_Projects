@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Random Profile</title>
+
+</head>
+<body>
+
+  <div id="profile"></div>
+  <button id="btn">Generate Profile</button>
+
+  <script>
+    const profile = document.getElementById("profile");
+    const btn = document.getElementById("btn");
+
+    function getUser() {
+      fetch("https://randomuser.me/api/")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          const user = data.results[0];
+
+          profile.innerHTML = `
+            <div class="card">
+              <img src="${user.picture.large}" alt="Profile picture">
+              <h2>${user.name.first} ${user.name.last}</h2>
+              <p>${user.email}</p>
+              <p>${user.phone}</p>
+            </div>
+          `;
+        })
+        .catch(function () {
+          profile.innerHTML = "<p>Could not load a user. Try again.</p>";
+        });
+    }
+
+    btn.addEventListener("click", getUser);
+    getUser();
+  </script>
+
+</body>
+</html>
