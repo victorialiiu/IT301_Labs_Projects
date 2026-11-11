@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign up</title>
+</head>
+<body>
+  <form id="signup-form">
+    <h1>Create your account</h1>
+ 
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+ 
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required><br><br>
+ 
+    <label for="password">Password</label><br>
+    <input type="password" id="password" name="password" placeholder="Create a password" required>
+ 
+    <div class="rules" id="password-rules" hidden>
+      <div id="rule-length" class="rule">✖ At least 6 characters</div>
+      <div id="rule-special" class="rule">✖ Must include a special character (!@#$...)</div>
+      <div id="rule-uppercase" class="rule">✖ Must include an uppercase letter (A-Z)</div>
+    </div>
+    <br>
+ 
+    <button type="submit">Sign up</button>
+    <p id="message" role="alert"></p>
+  </form>
+ 
+  <script>
+    const form = document.getElementById("signup-form");
+    const passwordInput = document.getElementById("password");
+    const rulesBox = document.getElementById("password-rules");
+    const message = document.getElementById("message");
+ 
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+ 
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = passwordInput.value;
+ 
+      if (name === "" || email === "" || password === "") {
+        message.textContent = "Please fill in all fields.";
+        return;
+      }
+ 
+      message.textContent = "Success! Your account has been created.";
+      form.reset();
+      rulesBox.hidden = true;
+    });
+ 
+    passwordInput.addEventListener("input", function () {
+      const password = passwordInput.value;
+ 
+      rulesBox.hidden = false;
+ 
+      updateRule("rule-length", password.length >= 6, "At least 6 characters");
+      updateRule("rule-special", /[!@#$%^&*(),.?":{}|<>]/.test(password), "Must include a special character (!@#$...)");
+      updateRule("rule-uppercase", /[A-Z]/.test(password), "Must include an uppercase letter (A-Z)");
+    });
+ 
+    function updateRule(id, condition, text) {
+      const el = document.getElementById(id);
+      el.classList.toggle("valid", condition);
+      el.classList.toggle("invalid", !condition);
+      el.textContent = (condition ? "✔ " : "✖ ") + text;
+    }
+  </script>
+</body>
+</html>
